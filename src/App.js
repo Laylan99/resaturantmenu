@@ -1,3 +1,4 @@
+import React from "react";
 import './App.css';
 import NavBar from "./components/Navigation.jsx";
 import Sweets from "./components/Sweets.jsx";
@@ -13,7 +14,7 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <Routes>
-        <Route path="/restaurant" element={
+        <Route path="/" element={
           <Home/>
         } exact />
         <Route path="/westernFoods" element={

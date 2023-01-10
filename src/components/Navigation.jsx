@@ -1,3 +1,4 @@
+import React from "react";
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -10,7 +11,7 @@ function NavBar() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/restaurant" className="textStyle h2">LD Restaurant</Navbar.Brand>
+        <Navbar.Brand href="/" className="textStyle h2">LD Restaurant</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -18,7 +19,7 @@ function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/restaurant" >Home</Nav.Link>
+            <Nav.Link href="/" >Home</Nav.Link>
             <Nav.Link href="/westernFoods">Western Foods</Nav.Link>
             <Nav.Link href="/orientalFoods">Oriental Foods</Nav.Link>
             <Nav.Link href="/sweets">Sweets</Nav.Link>
