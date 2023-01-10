@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
-
+import NavBar from "./components/Navigation.jsx";
+import Sweets from "./components/Sweets.jsx";
+import Home from "./components/Home.jsx";
+import HotDrinks from "./components/HotDrinks.jsx";
+import WesternFoods from "./components/WesternFoods.jsx";
+import OrientalFoods from "./components/OrientalFoods.jsx";
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.min.css"
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <NavBar/>
+      <Routes>
+        <Route path="/restaurant" element={
+          <Home/>
+        } exact />
+        <Route path="/westernFoods" element={
+            <WesternFoods/>
+          } />
+          <Route path="/orientalFoods" element={
+              <OrientalFoods/>
+          } />
+          <Route path="/drinks" element={
+              <HotDrinks/>
+          } />
+          <Route path="/sweets" element={
+              <Sweets/>
+          } />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
